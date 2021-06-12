@@ -38,13 +38,13 @@
 從[1, N]中隨機取一個數，取得 P或Q 的概率為 2/N-1，因此若是要求出P
 ，我們必須不停的使用不同的隨機數來重複找尋其中一個因數，但是我們可以透過”生日悖論”來提高中獎的機率。
 試想，如果一個房間里有30個人，那麼至少有兩個人的生日相同的概率是多少? 
-
+![image](https://github.com/tim86101/CS335-CTF/blob/main/CTF%20Final%20project/formula.png)
 &emsp;&emsp;透過這種不重複選取的方式，我們就能大大的提升找到因數的機率。回到原本題目，[2,N-1]只有2個數能整除𝑁(𝑝 , 𝑞)
 ，但如果我們問說有多少個數使𝑔𝑐𝑑(𝑥, 𝑁) > 1，答案就有很多了，共有𝑝 + 𝑞 − 2 個數。
-
+![image](https://github.com/tim86101/CS335-CTF/blob/main/CTF%20Final%20project/formula2.png)
 &emsp;&emsp;因此，我們只要透過一個能夠隨機產生一個不重複的數，相較之下我們就能夠比較快地找到這個與N不互質的數，進而找到P。
 
 ## 實驗結果
-
+![image](https://github.com/tim86101/CS335-CTF/blob/main/CTF%20Final%20project/result.png)
 i為分解嘗試的次數，也就是說透過Pollard′s rho algorithm 只用了528次，即破解了2^30大的數字的RSA加密系統。
   

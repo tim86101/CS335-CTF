@@ -1,0 +1,7 @@
+網路攻防第二次程式作業說明  學號1043330 周建廷
+題目講解:
+Server會給x,y，必須找到一組a,b使得 ax+by(mod 10000)=GCD(x,y)。
+程式說明:
+	利用netcat 連接到 140.138.77.30:6015 ，然後使用for迴圈循環1000次測資，其中將接收到的資料，由byte型態轉為string型態。
+利用replace做完字串處理去除b ,[,],\\,n等字元，將X,Y結果傳入euclidean function
+在euclidean function，假設a=x,b=y，使a=1,b=1存下左右兩邊的ab值，最後執行完輾轉相除法後，可以得到ax+by=gcd(x,y),判斷a,b是否大於0，若沒有，則加上10000，最後將gcd,a,b回傳。

@@ -1,0 +1,6 @@
+網路攻防第一次程式作業說明  學號1043330 周建廷
+程式說明:
+	利用netcat 連接到 140.138.77.30:6077後使用for迴圈循環1000次測資其中將接收到的random number由byte型態轉為string型態
+	之後使用string 中replace function字串處理去除b ,[,],\\,n等字元再利用string內建函式split依照空格切割字串放到int型態的list裡
+	將list用內建的sort作排序結果轉回string list利用逗號間隔依序放回string再將結果回傳
+
